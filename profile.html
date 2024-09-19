@@ -1,0 +1,167 @@
+<style>
+:root {
+	--sumiInk0: #16161D;
+	--sumiInk1: #1F1F28;
+	--sumiInk2: #2A2A37;
+	--sumiInk3: #363646;
+	--fujiWhite: #DCD7BA;
+	--oldWhite: #C8C093;
+	--autumnRed: #C34043;
+	--autumnYellow: #DCA561;
+	--autumnGreen: #76946A;
+	--dragonBlue: #658594;
+	--oniViolet: #957FB8;
+	
+	--ff: monospace;
+}
+
+* {
+	cursor: url('https://i.postimg.cc/xXxTVpPm/default.png'), auto;
+}
+
+a {
+	color: var(--dragonBlue);
+}
+
+/*removed elements*/
+.url-info,
+.profile > .col > span {
+	display: none;
+}
+
+body {
+	background-color: var(--sumiInk0);
+	color: var(--fujiWhite);
+	font-family: var(--ff);
+	font-size: 13px;
+}
+
+nav {
+	color: var(--fujiWhite);
+
+	.top, .links {
+		background-color: var(--sumiInk1);
+	}
+
+	.links a {
+		color: var(--dragonBlue);
+		text-shadow: none;
+	}
+}
+
+main {
+	color: var(--fujiWhite);
+	background-color: var(--sumiInk0);
+}
+
+.container {
+	width: 810px;
+	border: 2px solid var(--sumiInk3);
+}
+
+@media (min-width: 1000px) {
+	body {
+		padding: 4rem;
+	}
+	.container {
+		width: 100%;
+	}
+	.row.profile {
+		display: grid;
+		grid-template-columns: 1fr auto;
+
+		.col.left {
+			width: 100%;
+			height: fit-content;
+			display: grid;
+			grid-template-areas:
+				"ga ct t1"
+				"md t2 t1";
+			gap: 1rem;
+
+			> * {
+				height: fit-content;
+			}
+
+			> .edit-link { 
+				position: fixed; 
+				top: 1rem; 
+				left: 1rem;
+			}
+
+			.general-about {
+				grid-area: ga;
+			}
+
+			.mood {
+				grid-area: md;
+			}
+
+			.table-section:not(:last-child) {
+				grid-area: t1;
+			}
+
+			.table-section:last-child {
+				grid-area: t2;
+			}
+
+		}
+
+		.col.right {
+		}
+	}
+}
+
+/*windows */
+.profile .contact,
+.profile .url-info,
+.profile .table-section,
+.setting-section,
+.home-actions
+{
+	border: 2px solid var(--sumiInk3);
+}
+
+.profile .contact .heading,
+.profile .table-section .heading,
+.setting-section .heading,
+.home-actions .heading
+{
+	background-color: var(--sumiInk3);
+	color: inherit;
+}
+
+.profile .blurbs .heading,
+.profile .friends .heading {
+	background-color: var(--sumiInk3);
+	color: var(--fujiWhite);
+}
+
+.profile .blurbs .section h4 {
+	color: var(--autumnRed);
+}
+
+.count {
+	color: var(--oniViolet);
+}
+
+table {
+	border-color: var(--sumiInk3);
+}
+
+.details-table td {
+	background-color: var(--sumiInk1);
+}
+
+.details-table td:first-child {
+	background-color: var(--sumiInk2);
+	color: var(--dragonBlue);
+}
+
+footer {
+	overflow: hidden;
+    height: 0;
+	background-color: transparent;
+}
+
+</style>
