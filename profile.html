@@ -59,16 +59,16 @@ main {
 	border: 2px solid var(--sumiInk3);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	body {
-		padding: 4rem;
+		padding: 4rem 15rem;
 	}
 	.container {
 		width: 100%;
 	}
 	.row.profile {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: auto auto;
 
 		.col.left {
 			width: 100%;
@@ -81,6 +81,7 @@ main {
 
 			> * {
 				height: fit-content;
+				max-width: 300px;
 			}
 
 			> .edit-link { 
